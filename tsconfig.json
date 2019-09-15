@@ -4,7 +4,7 @@
     "target": "es2015",
     "sourceMap": true,
     "preserveConstEnums": true,
-    "outDir": "build",
+    "outDir": "dist",
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "declaration": true

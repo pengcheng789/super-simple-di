@@ -6,6 +6,20 @@
 
 ## 用法
 
+* 安装依赖
+
+  如果使用的是`yarn`，在命令行输入
+
+  ```shell
+  > yarn add super-simple-di
+  ```
+
+  如果使用的是`npm`，在命令行输入
+
+  ```shell
+  > npm -i super-simple-di
+  ```
+
 * 导入模块
 
   使用`import`语句进行导入。
