@@ -9,13 +9,14 @@
   "engines": {
     "node": "*"
   },
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": {
     "name": "Pengcheng Cai",
     "email": "caipengcheng789@gmail.com"
   },
   "license": "Apache-2.0",
-  "main": "src/ssimple-di.ts",
+  "main": "dist/ssimple-di.js",
+  "types": "dist/ssimple-di.d.ts",
   "dependencies": {
     "@types/debug": "^4.1.5",
     "debug": "^4.1.1",
