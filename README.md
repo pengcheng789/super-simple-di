@@ -1,4 +1,4 @@
-# Simple DI
+# Super Simple DI
 
 ## 简介
 
@@ -11,7 +11,7 @@
   使用`import`语句进行导入。
 
   ```typescript
-  import * as simpleDI from 'simple-di';
+  import * as ssimpleDI from 'simple-di';
   ```
 
 * 声明 Bean
@@ -19,7 +19,7 @@
   使用`Component`装饰器声明需要注入成为 Bean 的组件。
 
   ``` typescript
-  @SimpleDI.Component
+  @ssimpleDI.Component
   class A {
       // 省略该类的代码
   }
@@ -32,13 +32,13 @@
   ```typescript
   // 省略导入的模块
 
-  @simpleDI.Module([
+  @ssimpleDI.Module([
       A,
       // 省略其它 Bean
   ])
   class Module {}
 
-  simpleDI.init()
+  ssimpleDI.init()
 
   // 省略其它的代码
   ```
@@ -48,7 +48,7 @@
   ```typescript
   // ...
 
-  let a = simpleDI.getInstance<A>(A);
+  let a = ssimpleDI.getInstance<A>(A);
 
   // ...
   ```
@@ -72,9 +72,9 @@
   ```typescript
   // file: a.ts
 
-  import * as simpleDI from 'simple-di';
+  import * as ssimpleDI from 'simple-di';
 
-  @simpleDi.Component
+  @ssimpleDi.Component
   export class A {
       a = 'a';
   }
@@ -83,10 +83,10 @@
   ```typescript
   // file: b.ts
 
-  import * as simpleDI from 'simple-di';
+  import * as ssimpleDI from 'ssimple-di';
   import { A } from './a.ts';
 
-  @simpleDi.Component
+  @ssimpleDi.Component
   export class B {
       b = 'b';
 
@@ -102,20 +102,20 @@
   // file: main.ts
 
   import { strict as assert } from 'assert';
-  import * as simpleDI from 'simple-di';
+  import * as ssimpleDI from 'ssimple-di';
   import { A } from './a.ts';
   import { B } from './b.ts';
 
-  @simpleDI.Module([
+  @ssimpleDI.Module([
       B,
       A
   ])
   export class Module {}
 
-  simpleDI.init();
+  ssimpleDI.init();
 
-  let a = simpleDI.getInstance<A>(A);
-  let b = simpleDI.getInstance<B>(B);
+  let a = ssimpleDI.getInstance<A>(A);
+  let b = ssimpleDI.getInstance<B>(B);
 
   assert.strictEqual(a.a, 'a');  // OK
   assert.strictEqual(b.b, 'b');  // OK

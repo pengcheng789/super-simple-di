@@ -1,10 +1,10 @@
-import * as simpleDI from '../src/simple-di';
+import * as ssimpleDI from '../src/ssimple-di';
 
 test('Get instances from DI container.', () => {
-    @simpleDI.Component
+    @ssimpleDI.Component
     class A { a = 'a' }
 
-    @simpleDI.Component
+    @ssimpleDI.Component
     class B { 
         b = 'b';
 
@@ -17,15 +17,15 @@ test('Get instances from DI container.', () => {
         }
     }
 
-    @simpleDI.Module([
+    @ssimpleDI.Module([
         B,
         A
     ])
     class Module {}
 
-    simpleDI.init();
-    let a = simpleDI.getInstance<A>(A);
-    let b = simpleDI.getInstance<B>(B);
+    ssimpleDI.init();
+    let a = ssimpleDI.getInstance<A>(A);
+    let b = ssimpleDI.getInstance<B>(B);
 
     expect(a.a).toBe('a');
     expect(b.b).toBe('b');
