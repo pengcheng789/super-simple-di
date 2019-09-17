@@ -67,6 +67,10 @@
   // ...
   ```
 
+## 注意事项
+
+[装饰器](https://www.typescriptlang.org/docs/handbook/decorators.html)在TypeScript中还属于实验特性。因此，要使用装饰器特性需要添加两个编译参数：`--target ES5`和`--experimentalDecorators`。
+
 ## 实例
 
 * 目录结构
@@ -88,7 +92,7 @@
 
   import * as ssimpleDI from 'simple-di';
 
-  @ssimpleDi.Component
+  @ssimpleDI.Component
   export class A {
       a = 'a';
   }
@@ -100,7 +104,7 @@
   import * as ssimpleDI from 'ssimple-di';
   import { A } from './a.ts';
 
-  @ssimpleDi.Component
+  @ssimpleDI.Component
   export class B {
       b = 'b';
 
