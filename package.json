@@ -20,7 +20,7 @@
   "dependencies": {
     "@types/debug": "^4.1.5",
     "debug": "^4.1.1",
-    "log4js": "^6.0.0",
+    "log4js": "^6.4.0",
     "reflect-metadata": "^0.1.13"
   },
   "devDependencies": {
